@@ -1,28 +1,110 @@
-# SafeWipe
-Secure mobile data wipe tool (GUI + CLI) for safe resale — prevents forensic recovery after factory reset. Built with Python &amp; PySide6.
+# 🧹 SafeWipe — Mobile Secure Erase (Prototype)
 
-# SafeWipe — Mobile Secure Erase (Prototype)
+**Author:** HARIOM SINGH (MR.Cyber)  
+**Purpose:** A GUI + CLI tool to help ordinary users securely wipe Android phones before resale — designed to prevent **forensic recovery** even after factory reset.
 
-**Author:** HARIOM SINGH  
-**Purpose:** A GUI tool to help ordinary users securely wipe Android phones (non-root focused flow).  
-**WARNING:** This tool can irreversibly erase data. **Do not use on devices you do not own.** Always test on spare devices first.
+⚠️ **WARNING:**  
+This tool can irreversibly erase data. Do **NOT** use it on devices you don’t own.  
+Always test first on spare / old devices.
 
-## Features
-- PySide6 GUI with dark "hacker" theme.
-- ADB-based detection and quick checks (`ro.crypto.state`, root detection, packages).
-- Recommended safe-wipe flow for non-root devices: **Enable encryption → Factory Reset → Verify**.
-- Dry-run default; destructive actions require explicit serial confirmation.
-- Export activity report.
+---
 
-## Requirements (for development)
-- Python 3.10+  
-- PySide6 (`pip install PySide6`)  
-- PyInstaller (for building exe): `pip install pyinstaller`  
-- adb (Android Platform Tools) — place `adb.exe` with the exe or in PATH.
+## 🧠 Overview
 
-## Quick usage
-1. Connect device with USB Debugging enabled.  
-2. Run locally:
+SafeWipe is a **Python + PySide6** based GUI tool that performs secure mobile data wiping operations using **ADB** (Android Debug Bridge).  
+It focuses on **non-root** Android devices — helping ensure data safety and privacy before resale.
+
+---
+
+## ✨ Features
+
+- 🖥️ PySide6 GUI with dark **hacker-style theme**
+- 🔍 Automatic ADB detection of connected devices
+- 📱 Quick checks:  
+  - `ro.crypto.state` (encryption status)  
+  - Root detection  
+  - Installed package summary
+- 🔒 Recommended Safe-Wipe Flow for **non-root** phones:
+  1. Enable full-disk **encryption**
+  2. Perform **factory reset**
+  3. Verify post-wipe status
+- 🧪 **Dry-run mode** by default (no destructive action)
+- 🧾 Destructive actions require explicit **serial confirmation**
+- 📤 Export activity logs or reports
+- ⚙️ Works on Windows, Linux, and macOS
+
+---
+
+## ⚙️ Requirements
+
+- **Python 3.10+**
+- **ADB (Android Platform Tools)** — download from  
+  [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools)
+- Add `adb.exe` to your PATH or place it next to the built exe.
+- **Dependencies:**
+  ```bash
+  pip install PySide6
+  pip install pyinstaller
+🚀 Quick Start (Run from Source)
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/mrcyb4r/SafeWipe.git
+cd SafeWipe
+Connect your Android device with USB Debugging enabled.
+
+Run the tool:
+
+bash
+Copy code
+python safewipe.py
+Follow on-screen steps to:
+
+Detect device
+
+View status
+
+Start secure wipe (dry-run or confirmed mode)
+
+🧱 Build Standalone EXE (Windows)
+If you want to create a standalone executable:
+
+bash
+Copy code
+pyinstaller --onefile --windowed safewipe.py
+This will create a portable SafeWipe.exe in the dist/ folder.
+Copy adb.exe, AdbWinApi.dll, and AdbWinUsbApi.dll next to it for full functionality.
+
+🧩 CLI Mode (Coming Soon)
+For advanced users:
+
+bash
+Copy code
+python safewipe.py --cli --dry-run
+📜 License
+This project is open-source under the MIT License.
+
+🔗 Repository
+GitHub: https://github.com/mrcyb4r/SafeWipe
+
+🧠 Credits
+Developed by HARIOM SINGH (MR.Cyber)
+Cyber Expert | EbhartSec | Digital Forensics & Mobile Security Researcher
+
+yaml
+Copy code
+
+---
+
+### ✅ How to use this
+
+1. Go to your GitHub repo folder.  
+2. Create (or open) `README.md`.  
+3. Paste the above text.  
+4. Commit & push:
    ```bash
-   python safewipe.py
-
+   git add README.md
+   git commit -m "Added detailed project README"
+   git push origin main
+Would you like me to also create a GitHub badges header section (like Python version, stars, license, build status) for the top of your README?
