@@ -48,17 +48,17 @@ It focuses on **non-root** Android devices — helping ensure data safety and pr
 🚀 Quick Start (Run from Source)
 Clone the repository:
 
-bash
-Copy code
 git clone https://github.com/mrcyb4r/SafeWipe.git
 cd SafeWipe
 Connect your Android device with USB Debugging enabled.
 
 Run the tool:
 
-bash
-Copy code
+
+git clone https://github.com/mrcyb4r/SafeWipe.git
+cd SafeWipe
 python safewipe.py
+
 Follow on-screen steps to:
 
 Detect device
@@ -70,18 +70,12 @@ Start secure wipe (dry-run or confirmed mode)
 🧱 Build Standalone EXE (Windows)
 If you want to create a standalone executable:
 
-bash
-Copy code
+
 pyinstaller --onefile --windowed safewipe.py
 This will create a portable SafeWipe.exe in the dist/ folder.
 Copy adb.exe, AdbWinApi.dll, and AdbWinUsbApi.dll next to it for full functionality.
 
-🧩 CLI Mode (Coming Soon)
-For advanced users:
 
-bash
-Copy code
-python safewipe.py --cli --dry-run
 📜 License
 This project is open-source under the MIT License.
 
@@ -92,18 +86,6 @@ GitHub: https://github.com/mrcyb4r/SafeWipe
 Developed by HARIOM SINGH (MR.Cyber)
 Cyber Expert | EbhartSec | Digital Forensics & Mobile Security Researcher
 
-yaml
-Copy code
-
----
-
-### ✅ How to use this
-
-1. Go to your GitHub repo folder.  
-2. Create (or open) `README.md`.  
-3. Paste the above text.  
-4. Commit & push:
-   ```bash
    git add README.md
    git commit -m "Added detailed project README"
    git push origin main
